@@ -24,7 +24,8 @@ FORMS += \
         -lopencv_core490 \
         -lopencv_imgproc490 \
         -lopencv_highgui490 \
-        -lopencv_video490
+        -lopencv_video490   \
+        -lopencv_imgcodecs490
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
