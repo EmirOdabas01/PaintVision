@@ -26,10 +26,14 @@ public:
 private slots:
     void on_actionOpen_triggered();
 
+    void on_actionNew_triggered();
+
+    void show_image();
+
 private:
     Ui::MainWindow *ui;
 
-    cv::Mat image;
+    cv::Mat Main_image;
 
     QGraphicsScene *Scene;
 
