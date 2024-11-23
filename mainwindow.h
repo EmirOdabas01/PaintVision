@@ -30,6 +30,10 @@ private slots:
 
     void show_image();
 
+    void on_rotateLeft_clicked();
+
+    void on_rotateRight_clicked();
+
 private:
     Ui::MainWindow *ui;
 
@@ -38,5 +42,7 @@ private:
     QGraphicsScene *Scene;
 
     QImage MatToQImage(const cv::Mat& image);
+
+
 };
 #endif // MAINWINDOW_H

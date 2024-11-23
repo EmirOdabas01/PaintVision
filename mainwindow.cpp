@@ -13,6 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->graphicsView->setScene(Scene);
 
     MainWindow::on_actionNew_triggered();
+
 }
 
 MainWindow::~MainWindow()
@@ -35,6 +36,9 @@ void MainWindow::on_actionOpen_triggered()
             return;
         }
 
+        if(Main_image.rows > 800 || Main_image.cols > 600)
+            cv::resize(Main_image, Main_image, cv::Size(800, 600));
+
         show_image();
     }
 }
@@ -56,7 +60,7 @@ void MainWindow::show_image()
 
 void MainWindow::on_actionNew_triggered()
 {
-    Main_image = cv::Mat::zeros(512, 512, CV_8UC3);
+    Main_image = cv::Mat::zeros(800, 600, CV_8UC3);
     Main_image.setTo(255);
     show_image();
 }
@@ -95,5 +99,21 @@ QImage MainWindow::MatToQImage(const cv::Mat& Mat_image) {
         return QImage();
     }
 
+}
+
+
+void MainWindow::on_rotateLeft_clicked()
+{
+    cv::rotate(Main_image, Main_image, cv::ROTATE_90_COUNTERCLOCKWISE);
+
+    show_image();
+}
+
+
+void MainWindow::on_rotateRight_clicked()
+{
+    cv::rotate(Main_image, Main_image, cv::ROTATE_90_CLOCKWISE);
+
+    show_image();
 }
 
