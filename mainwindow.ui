@@ -69,6 +69,9 @@
             <height>100</height>
            </size>
           </property>
+          <property name="toolTip">
+           <string>Rectangle Select</string>
+          </property>
           <property name="text">
            <string>Rectangle</string>
           </property>
@@ -87,6 +90,9 @@
             <width>100</width>
             <height>100</height>
            </size>
+          </property>
+          <property name="toolTip">
+           <string>Free Select</string>
           </property>
           <property name="text">
            <string>Free</string>
@@ -114,6 +120,9 @@
             <height>50</height>
            </size>
           </property>
+          <property name="toolTip">
+           <string>Color Pick</string>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -136,6 +145,9 @@
             <width>50</width>
             <height>50</height>
            </size>
+          </property>
+          <property name="toolTip">
+           <string>Brush</string>
           </property>
           <property name="text">
            <string/>
@@ -160,6 +172,9 @@
             <height>50</height>
            </size>
           </property>
+          <property name="toolTip">
+           <string>Pen</string>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -182,6 +197,9 @@
             <width>50</width>
             <height>50</height>
            </size>
+          </property>
+          <property name="toolTip">
+           <string>Fill</string>
           </property>
           <property name="text">
            <string/>
@@ -206,6 +224,9 @@
             <height>50</height>
            </size>
           </property>
+          <property name="toolTip">
+           <string>Add Text</string>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -229,6 +250,9 @@
             <height>50</height>
            </size>
           </property>
+          <property name="toolTip">
+           <string>Magnifier</string>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -249,8 +273,8 @@
          <widget class="QPushButton" name="flipVertical">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>20</horstretch>
-            <verstretch>20</verstretch>
+            <horstretch>50</horstretch>
+            <verstretch>50</verstretch>
            </sizepolicy>
           </property>
           <property name="minimumSize">
@@ -259,11 +283,20 @@
             <height>20</height>
            </size>
           </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
           <property name="sizeIncrement">
            <size>
             <width>20</width>
             <height>20</height>
            </size>
+          </property>
+          <property name="toolTip">
+           <string>Flip Vertical</string>
           </property>
           <property name="text">
            <string/>
@@ -278,8 +311,8 @@
          <widget class="QPushButton" name="flipHorizontal">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>20</horstretch>
-            <verstretch>20</verstretch>
+            <horstretch>50</horstretch>
+            <verstretch>50</verstretch>
            </sizepolicy>
           </property>
           <property name="minimumSize">
@@ -288,11 +321,20 @@
             <height>20</height>
            </size>
           </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
           <property name="sizeIncrement">
            <size>
             <width>20</width>
             <height>20</height>
            </size>
+          </property>
+          <property name="toolTip">
+           <string>Flip Horizontal</string>
           </property>
           <property name="text">
            <string/>
@@ -303,12 +345,12 @@
           </property>
          </widget>
         </item>
-        <item row="0" column="0">
-         <widget class="QPushButton" name="rotateLeft">
+        <item row="1" column="2">
+         <widget class="QPushButton" name="flip">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>20</horstretch>
-            <verstretch>20</verstretch>
+            <horstretch>50</horstretch>
+            <verstretch>50</verstretch>
            </sizepolicy>
           </property>
           <property name="minimumSize">
@@ -317,18 +359,27 @@
             <height>20</height>
            </size>
           </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
           <property name="sizeIncrement">
            <size>
-            <width>30</width>
-            <height>30</height>
+            <width>20</width>
+            <height>20</height>
            </size>
+          </property>
+          <property name="toolTip">
+           <string>Transpose</string>
           </property>
           <property name="text">
            <string/>
           </property>
           <property name="icon">
            <iconset resource="icons.qrc">
-            <normaloff>:/new/menuIcons/icons/rotateLeft.png</normaloff>:/new/menuIcons/icons/rotateLeft.png</iconset>
+            <normaloff>:/new/menuIcons/icons/transpose.png</normaloff>:/new/menuIcons/icons/transpose.png</iconset>
           </property>
          </widget>
         </item>
@@ -336,8 +387,8 @@
          <widget class="QPushButton" name="rotateRight">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>30</horstretch>
-            <verstretch>30</verstretch>
+            <horstretch>50</horstretch>
+            <verstretch>50</verstretch>
            </sizepolicy>
           </property>
           <property name="minimumSize">
@@ -346,11 +397,20 @@
             <height>20</height>
            </size>
           </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
           <property name="sizeIncrement">
            <size>
             <width>20</width>
             <height>20</height>
            </size>
+          </property>
+          <property name="toolTip">
+           <string>Rotate to Right</string>
           </property>
           <property name="text">
            <string/>
@@ -365,8 +425,8 @@
          <widget class="QPushButton" name="reverse">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>20</horstretch>
-            <verstretch>20</verstretch>
+            <horstretch>50</horstretch>
+            <verstretch>50</verstretch>
            </sizepolicy>
           </property>
           <property name="minimumSize">
@@ -375,11 +435,20 @@
             <height>20</height>
            </size>
           </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
           <property name="sizeIncrement">
            <size>
             <width>20</width>
             <height>20</height>
            </size>
+          </property>
+          <property name="toolTip">
+           <string>Reverse</string>
           </property>
           <property name="layoutDirection">
            <enum>Qt::LayoutDirection::LeftToRight</enum>
@@ -393,12 +462,12 @@
           </property>
          </widget>
         </item>
-        <item row="1" column="2">
-         <widget class="QPushButton" name="flip">
+        <item row="0" column="0">
+         <widget class="QPushButton" name="rotateLeft">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>20</horstretch>
-            <verstretch>20</verstretch>
+            <horstretch>50</horstretch>
+            <verstretch>50</verstretch>
            </sizepolicy>
           </property>
           <property name="minimumSize">
@@ -407,18 +476,27 @@
             <height>20</height>
            </size>
           </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
           <property name="sizeIncrement">
            <size>
-            <width>20</width>
-            <height>20</height>
+            <width>30</width>
+            <height>30</height>
            </size>
+          </property>
+          <property name="toolTip">
+           <string>Rotate to Left</string>
           </property>
           <property name="text">
            <string/>
           </property>
           <property name="icon">
            <iconset resource="icons.qrc">
-            <normaloff>:/new/menuIcons/icons/transpose.png</normaloff>:/new/menuIcons/icons/transpose.png</iconset>
+            <normaloff>:/new/menuIcons/icons/rotateLeft.png</normaloff>:/new/menuIcons/icons/rotateLeft.png</iconset>
           </property>
          </widget>
         </item>
@@ -443,7 +521,10 @@
          <number>0</number>
         </property>
         <item>
-         <widget class="QRadioButton" name="radioButton_2">
+         <widget class="QRadioButton" name="primaryColor">
+          <property name="toolTip">
+           <string/>
+          </property>
           <property name="styleSheet">
            <string notr="true">QRadioButton::indicator {
             width: 30px; 
@@ -459,7 +540,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QRadioButton" name="radioButton">
+         <widget class="QRadioButton" name="secondaryColor">
           <property name="styleSheet">
            <string notr="true">QRadioButton::indicator {
             width: 30px; 
@@ -477,7 +558,7 @@
        </layout>
       </item>
       <item>
-       <widget class="QWidget" name="" native="true">
+       <widget class="QWidget" name="widget" native="true">
         <property name="styleSheet">
          <string notr="true">QRadioButton::indicator {
             width: 15px; 
