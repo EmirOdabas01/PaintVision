@@ -34,6 +34,14 @@ private slots:
 
     void on_rotateRight_clicked();
 
+    void on_flipHorizontal_clicked();
+
+    void on_flipVertical_clicked();
+
+    void on_reverse_clicked();
+
+    void on_flip_clicked();
+
 private:
     Ui::MainWindow *ui;
 

@@ -8,5 +8,9 @@
         <file>icons/text.png</file>
         <file>icons/rotateLeft.png</file>
         <file>icons/rotateRight.png</file>
+        <file>icons/horizontalFlip.png</file>
+        <file>icons/vertiicalFlip.png</file>
+        <file>icons/rotate180.png</file>
+        <file>icons/transpose.png</file>
     </qresource>
 </RCC>

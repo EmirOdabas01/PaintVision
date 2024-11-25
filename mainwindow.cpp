@@ -117,3 +117,35 @@ void MainWindow::on_rotateRight_clicked()
     show_image();
 }
 
+
+void MainWindow::on_flipHorizontal_clicked()
+{
+    cv::flip(Main_image, Main_image, 1);
+
+    show_image();
+}
+
+
+void MainWindow::on_flipVertical_clicked()
+{
+    cv::flip(Main_image, Main_image, 0);
+
+    show_image();
+}
+
+
+void MainWindow::on_reverse_clicked()
+{
+    cv::rotate(Main_image, Main_image, cv::ROTATE_180);
+
+    show_image();
+}
+
+
+void MainWindow::on_flip_clicked()
+{
+    cv::transpose(Main_image, Main_image);
+
+    show_image();
+}
+

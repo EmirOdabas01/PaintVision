@@ -268,6 +268,10 @@
           <property name="text">
            <string/>
           </property>
+          <property name="icon">
+           <iconset resource="icons.qrc">
+            <normaloff>:/new/menuIcons/icons/vertiicalFlip.png</normaloff>:/new/menuIcons/icons/vertiicalFlip.png</iconset>
+          </property>
          </widget>
         </item>
         <item row="1" column="0">
@@ -292,6 +296,10 @@
           </property>
           <property name="text">
            <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="icons.qrc">
+            <normaloff>:/new/menuIcons/icons/horizontalFlip.png</normaloff>:/new/menuIcons/icons/horizontalFlip.png</iconset>
           </property>
          </widget>
         </item>
@@ -373,8 +381,15 @@
             <height>20</height>
            </size>
           </property>
+          <property name="layoutDirection">
+           <enum>Qt::LayoutDirection::LeftToRight</enum>
+          </property>
           <property name="text">
            <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="icons.qrc">
+            <normaloff>:/new/menuIcons/icons/rotate180.png</normaloff>:/new/menuIcons/icons/rotate180.png</iconset>
           </property>
          </widget>
         </item>
@@ -400,6 +415,10 @@
           </property>
           <property name="text">
            <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="icons.qrc">
+            <normaloff>:/new/menuIcons/icons/transpose.png</normaloff>:/new/menuIcons/icons/transpose.png</iconset>
           </property>
          </widget>
         </item>
