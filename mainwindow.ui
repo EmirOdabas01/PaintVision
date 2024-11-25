@@ -530,8 +530,7 @@
             width: 30px; 
             height: 30px;
             border-radius: 16px; 
-            border: 2px solid white;
-            background-color: black; 
+            border: 2px solid blue;
         }</string>
           </property>
           <property name="text">
@@ -547,7 +546,6 @@
             height: 30px;
             border-radius: 16px; 
             border: 2px solid black;
-            background-color: white; 
         }</string>
           </property>
           <property name="text">
@@ -836,7 +834,7 @@
           </widget>
          </item>
          <item row="1" column="2">
-          <widget class="QRadioButton" name="lightBrown">
+          <widget class="QRadioButton" name="sandyBrown">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -845,7 +843,7 @@
            </property>
            <property name="styleSheet">
             <string notr="true">QRadioButton::indicator {
-            background-color: lightBrown; 
+            background-color: sandyBrown; 
         }</string>
            </property>
            <property name="text">

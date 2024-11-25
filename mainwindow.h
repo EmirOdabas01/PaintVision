@@ -42,6 +42,50 @@ private slots:
 
     void on_flip_clicked();
 
+    void on_blackRbutton_toggled(bool checked);
+
+    void on_grey_toggled(bool checked);
+
+    void on_brown_toggled(bool checked);
+
+    void on_red_toggled(bool checked);
+
+    void on_orange_toggled(bool checked);
+
+    void on_green_toggled(bool checked);
+
+    void on_yellow_toggled(bool checked);
+
+    void on_lightBlue_toggled(bool checked);
+
+    void on_darkBlue_toggled(bool checked);
+
+    void on_purple_toggled(bool checked);
+
+    void on_whiteRbutton_toggled(bool checked);
+
+    void on_lightGrey_toggled(bool checked);
+
+    void on_sandyBrown_toggled(bool checked);
+
+    void on_pink_toggled(bool checked);
+
+    void on_gold_toggled(bool checked);
+
+    void on_lightYellow_toggled(bool checked);
+
+    void on_lightGreen_toggled(bool checked);
+
+    void on_cyan_toggled(bool checked);
+
+    void on_darkCyan_toggled(bool checked);
+
+    void on_mediumPurple_toggled(bool checked);
+
+    void on_secondaryColor_toggled(bool checked);
+
+    void on_primaryColor_toggled(bool checked);
+
 private:
     Ui::MainWindow *ui;
 
@@ -50,6 +94,12 @@ private:
     QGraphicsScene *Scene;
 
     QImage MatToQImage(const cv::Mat& image);
+
+    QString PrimaryColorStyle;
+
+    QString secondaryColorStyle;
+
+    bool isSecondaryChecked;
 
 
 };
