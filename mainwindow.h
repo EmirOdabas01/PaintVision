@@ -101,6 +101,6 @@ private:
 
     bool isSecondaryChecked;
 
-
+    QString selectedColor;
 };
 #endif // MAINWINDOW_H

@@ -157,22 +157,21 @@ void MainWindow::on_flip_clicked()
 
 void MainWindow::on_blackRbutton_toggled(bool checked)
 {
+    selectedColor = "QRadioButton::indicator {"
+                    "background-color: black;"
+                    "}";
     if(isSecondaryChecked)
     {
         ui->secondaryColor->setStyleSheet(
             secondaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: black;"
-            "}"
+           selectedColor
             );
     }
     else if(checked)
     {
         ui->primaryColor->setStyleSheet(
             PrimaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: black;"
-            "}"
+                selectedColor
             );
     }
 
@@ -180,438 +179,439 @@ void MainWindow::on_blackRbutton_toggled(bool checked)
 
 void MainWindow::on_grey_toggled(bool checked)
 {
+    selectedColor = "QRadioButton::indicator {"
+                    "background-color: grey;"
+                    "}";
     if(isSecondaryChecked)
     {
         ui->secondaryColor->setStyleSheet(
             secondaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: grey;"
-            "}"
+            selectedColor
             );
     }
     else if(checked)
     {
         ui->primaryColor->setStyleSheet(
             PrimaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: grey;"
-            "}"
+            selectedColor
             );
     }
+
 }
 
 
 void MainWindow::on_brown_toggled(bool checked)
 {
+    selectedColor = "QRadioButton::indicator {"
+                    "background-color: brown;"
+                    "}";
     if(isSecondaryChecked)
     {
         ui->secondaryColor->setStyleSheet(
             secondaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: brown;"
-            "}"
+            selectedColor
             );
     }
     else if(checked)
     {
         ui->primaryColor->setStyleSheet(
             PrimaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: brown;"
-            "}"
+            selectedColor
             );
     }
+
 }
 
 
 void MainWindow::on_red_toggled(bool checked)
 {
+    selectedColor = "QRadioButton::indicator {"
+                    "background-color: red;"
+                    "}";
     if(isSecondaryChecked)
     {
         ui->secondaryColor->setStyleSheet(
             secondaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: red;"
-            "}"
+            selectedColor
             );
     }
     else if(checked)
     {
         ui->primaryColor->setStyleSheet(
             PrimaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: red;"
-            "}"
+            selectedColor
             );
     }
+
 }
 
 
 void MainWindow::on_orange_toggled(bool checked)
 {
+    selectedColor = "QRadioButton::indicator {"
+                    "background-color: orange;"
+                    "}";
     if(isSecondaryChecked)
     {
         ui->secondaryColor->setStyleSheet(
             secondaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: orange;"
-            "}"
+            selectedColor
             );
     }
     else if(checked)
     {
         ui->primaryColor->setStyleSheet(
             PrimaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: orange;"
-            "}"
+            selectedColor
             );
     }
+
 }
 
 
 void MainWindow::on_green_toggled(bool checked)
 {
+    selectedColor = "QRadioButton::indicator {"
+                    "background-color: green;"
+                    "}";
     if(isSecondaryChecked)
     {
         ui->secondaryColor->setStyleSheet(
             secondaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: green;"
-            "}"
+            selectedColor
             );
     }
     else if(checked)
     {
         ui->primaryColor->setStyleSheet(
             PrimaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: green;"
-            "}"
+            selectedColor
             );
     }
+
 }
 
 
 void MainWindow::on_yellow_toggled(bool checked)
 {
+    selectedColor = "QRadioButton::indicator {"
+                    "background-color: yellow;"
+                    "}";
     if(isSecondaryChecked)
     {
         ui->secondaryColor->setStyleSheet(
             secondaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: yellow;"
-            "}"
+            selectedColor
             );
     }
     else if(checked)
     {
         ui->primaryColor->setStyleSheet(
             PrimaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: yellow;"
-            "}"
+            selectedColor
             );
     }
+
 }
 
 
 void MainWindow::on_lightBlue_toggled(bool checked)
 {
+    selectedColor = "QRadioButton::indicator {"
+                    "background-color: lightBlue;"
+                    "}";
     if(isSecondaryChecked)
     {
         ui->secondaryColor->setStyleSheet(
             secondaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: lightBlue;"
-            "}"
+            selectedColor
             );
     }
     else if(checked)
     {
         ui->primaryColor->setStyleSheet(
             PrimaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: lightBlue;"
-            "}"
+            selectedColor
             );
     }
+
 }
 
 
 void MainWindow::on_darkBlue_toggled(bool checked)
 {
+    selectedColor = "QRadioButton::indicator {"
+                    "background-color: darkBlue;"
+                    "}";
     if(isSecondaryChecked)
     {
         ui->secondaryColor->setStyleSheet(
             secondaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: darkBlue;"
-            "}"
+            selectedColor
             );
     }
     else if(checked)
     {
         ui->primaryColor->setStyleSheet(
             PrimaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: darkBlue;"
-            "}"
+            selectedColor
             );
     }
+
 }
 
 
 void MainWindow::on_purple_toggled(bool checked)
 {
+    selectedColor = "QRadioButton::indicator {"
+                    "background-color: purple;"
+                    "}";
     if(isSecondaryChecked)
     {
         ui->secondaryColor->setStyleSheet(
             secondaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: purple;"
-            "}"
+            selectedColor
             );
     }
     else if(checked)
     {
         ui->primaryColor->setStyleSheet(
             PrimaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: purple;"
-            "}"
+            selectedColor
             );
     }
+
 }
 
 
 void MainWindow::on_whiteRbutton_toggled(bool checked)
 {
+    selectedColor = "QRadioButton::indicator {"
+                    "background-color: white;"
+                    "}";
     if(isSecondaryChecked)
     {
         ui->secondaryColor->setStyleSheet(
             secondaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: white;"
-            "}"
+            selectedColor
             );
     }
     else if(checked)
     {
         ui->primaryColor->setStyleSheet(
             PrimaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: white;"
-            "}"
+            selectedColor
             );
     }
+
 }
 
 
 void MainWindow::on_lightGrey_toggled(bool checked)
 {
+    selectedColor = "QRadioButton::indicator {"
+                    "background-color: lightGrey;"
+                    "}";
     if(isSecondaryChecked)
     {
         ui->secondaryColor->setStyleSheet(
             secondaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: lightGrey;"
-            "}"
+            selectedColor
             );
     }
     else if(checked)
     {
         ui->primaryColor->setStyleSheet(
             PrimaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: lightGrey;"
-            "}"
+            selectedColor
             );
     }
+
 }
 
 
 void MainWindow::on_sandyBrown_toggled(bool checked)
 {
+    selectedColor = "QRadioButton::indicator {"
+                    "background-color: sandyBrown;"
+                    "}";
     if(isSecondaryChecked)
     {
         ui->secondaryColor->setStyleSheet(
             secondaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: sandyBrown;"
-            "}"
+            selectedColor
             );
     }
     else if(checked)
     {
         ui->primaryColor->setStyleSheet(
             PrimaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: sandyBrown;"
-            "}"
+            selectedColor
             );
     }
+
 }
 
 
 void MainWindow::on_pink_toggled(bool checked)
 {
+    selectedColor = "QRadioButton::indicator {"
+                    "background-color: pink;"
+                    "}";
     if(isSecondaryChecked)
     {
         ui->secondaryColor->setStyleSheet(
             secondaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: pink;"
-            "}"
+            selectedColor
             );
     }
     else if(checked)
     {
         ui->primaryColor->setStyleSheet(
             PrimaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: pink;"
-            "}"
+            selectedColor
             );
     }
+
 }
 
 
 void MainWindow::on_gold_toggled(bool checked)
 {
+    selectedColor = "QRadioButton::indicator {"
+                    "background-color: gold;"
+                    "}";
     if(isSecondaryChecked)
     {
         ui->secondaryColor->setStyleSheet(
             secondaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: gold;"
-            "}"
+            selectedColor
             );
     }
     else if(checked)
     {
         ui->primaryColor->setStyleSheet(
             PrimaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: gold;"
-            "}"
+            selectedColor
             );
     }
+
 }
 
 
 void MainWindow::on_lightYellow_toggled(bool checked)
 {
+    selectedColor = "QRadioButton::indicator {"
+                    "background-color: lightYellow;"
+                    "}";
     if(isSecondaryChecked)
     {
         ui->secondaryColor->setStyleSheet(
             secondaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: lightYellow;"
-            "}"
+            selectedColor
             );
     }
     else if(checked)
     {
         ui->primaryColor->setStyleSheet(
             PrimaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: lightYellow;"
-            "}"
+            selectedColor
             );
     }
+
 }
 
 
 void MainWindow::on_lightGreen_toggled(bool checked)
 {
+    selectedColor = "QRadioButton::indicator {"
+                    "background-color: lightGreen;"
+                    "}";
     if(isSecondaryChecked)
     {
         ui->secondaryColor->setStyleSheet(
             secondaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: lightGreen;"
-            "}"
+            selectedColor
             );
     }
     else if(checked)
     {
         ui->primaryColor->setStyleSheet(
             PrimaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: lightGreen;"
-            "}"
+            selectedColor
             );
     }
+
 }
 
 
 void MainWindow::on_cyan_toggled(bool checked)
 {
+    selectedColor = "QRadioButton::indicator {"
+                    "background-color: cyan;"
+                    "}";
     if(isSecondaryChecked)
     {
         ui->secondaryColor->setStyleSheet(
             secondaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: cyan;"
-            "}"
+            selectedColor
             );
     }
     else if(checked)
     {
         ui->primaryColor->setStyleSheet(
             PrimaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: cyan;"
-            "}"
+            selectedColor
             );
     }
+
 }
 
 
 void MainWindow::on_darkCyan_toggled(bool checked)
 {
+    selectedColor = "QRadioButton::indicator {"
+                    "background-color: darkCyan;"
+                    "}";
     if(isSecondaryChecked)
     {
         ui->secondaryColor->setStyleSheet(
             secondaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: darkCyan;"
-            "}"
+            selectedColor
             );
     }
     else if(checked)
     {
         ui->primaryColor->setStyleSheet(
             PrimaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: darkCyan;"
-            "}"
+            selectedColor
             );
     }
+
 }
 
 
 void MainWindow::on_mediumPurple_toggled(bool checked)
 {
+    selectedColor = "QRadioButton::indicator {"
+                    "background-color: mediumPurple;"
+                    "}";
     if(isSecondaryChecked)
     {
         ui->secondaryColor->setStyleSheet(
             secondaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: mediumPurple;"
-            "}"
+            selectedColor +
+             "border: 2px solid blue;"
             );
     }
     else if(checked)
     {
         ui->primaryColor->setStyleSheet(
             PrimaryColorStyle +
-            "QRadioButton::indicator {"
-            "background-color: mediumPurple;"
-            "}"
+            selectedColor
             );
     }
+
 }
 
 
@@ -621,19 +621,25 @@ void MainWindow::on_secondaryColor_toggled(bool checked)
     {
          isSecondaryChecked = true;
 
+        QString secondaryCurrentStyle = ui->secondaryColor->styleSheet();
+
         ui->secondaryColor->setStyleSheet(
-            secondaryColorStyle +
+            secondaryCurrentStyle +
             "QRadioButton::indicator {"
             "border: 2px solid blue;"
             "}"
             );
 
+        QString primaryCurrentStyle = ui->primaryColor->styleSheet();
+
          ui->primaryColor->setStyleSheet(
-             PrimaryColorStyle +
+             primaryCurrentStyle +
              "QRadioButton::indicator {"
              "border: 2px solid black;"
              "}"
              );
+
+
     }
 
 
@@ -646,15 +652,19 @@ void MainWindow::on_primaryColor_toggled(bool checked)
     {
         isSecondaryChecked = false;
 
+        QString primaryCurrentStyle = ui->primaryColor->styleSheet();
+
         ui->primaryColor->setStyleSheet(
-            PrimaryColorStyle +
+            primaryCurrentStyle +
             "QRadioButton::indicator {"
             "border: 2px solid blue;"
             "}"
             );
 
+        QString secondaryCurrentStyle = ui->secondaryColor->styleSheet();
+
         ui->secondaryColor->setStyleSheet(
-            secondaryColorStyle +
+            secondaryCurrentStyle +
             "QRadioButton::indicator {"
             "border: 2px solid black;"
             "}"

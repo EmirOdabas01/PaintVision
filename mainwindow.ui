@@ -545,7 +545,7 @@
             width: 30px; 
             height: 30px;
             border-radius: 16px; 
-            border: 2px solid black;
+            border: 2px solid blue;
         }</string>
           </property>
           <property name="text">
