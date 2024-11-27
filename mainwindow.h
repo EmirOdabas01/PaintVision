@@ -8,6 +8,7 @@
 #include <opencv2/imgcodecs.hpp>
 #include <QImage>
 #include <QGraphicsScene>
+#include "uiStylingRepo.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -95,12 +96,9 @@ private:
 
     QImage MatToQImage(const cv::Mat& image);
 
-    QString PrimaryColorStyle;
+    colorStyleInfo& rButtonStyleInfo = colorStyleInfo::getInstance();
 
-    QString secondaryColorStyle;
+    QString defaultRadioButtonStyle;
 
-    bool isSecondaryChecked;
-
-    QString selectedColor;
 };
 #endif // MAINWINDOW_H

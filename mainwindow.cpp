@@ -14,11 +14,15 @@ MainWindow::MainWindow(QWidget *parent)
 
     MainWindow::on_actionNew_triggered();
 
-    PrimaryColorStyle = ui->primaryColor->styleSheet();
+    defaultRadioButtonStyle = "QRadioButton::indicator {"
+                              "width: 30px; "
+                              "height: 30px; "
+                              "border-radius: 16px; "
+                              "border: 2px solid black; "
+                              "background-color: %1;"
+                              "}";
 
-    secondaryColorStyle = ui->secondaryColor->styleSheet();
 
-    isSecondaryChecked = false;
 }
 
 MainWindow::~MainWindow()
@@ -157,44 +161,35 @@ void MainWindow::on_flip_clicked()
 
 void MainWindow::on_blackRbutton_toggled(bool checked)
 {
-    selectedColor = "QRadioButton::indicator {"
-                    "background-color: black;"
-                    "}";
-    if(isSecondaryChecked)
+
+    if(rButtonStyleInfo.getIsSecondarySelected())
     {
-        ui->secondaryColor->setStyleSheet(
-            secondaryColorStyle +
-           selectedColor
-            );
+        rButtonStyleInfo.setSecondaryColor(colorList.at("black"));
+
+        ui->secondaryColor->setStyleSheet(rButtonStyleInfo.getSecondaryColorStyle());
     }
     else if(checked)
     {
-        ui->primaryColor->setStyleSheet(
-            PrimaryColorStyle +
-                selectedColor
-            );
+        rButtonStyleInfo.setPrimaryColor(colorList.at("black"));
+
+        ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
 
 }
 
 void MainWindow::on_grey_toggled(bool checked)
 {
-    selectedColor = "QRadioButton::indicator {"
-                    "background-color: grey;"
-                    "}";
-    if(isSecondaryChecked)
+    if(rButtonStyleInfo.getIsSecondarySelected())
     {
-        ui->secondaryColor->setStyleSheet(
-            secondaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setSecondaryColor(colorList.at("grey"));
+
+        ui->secondaryColor->setStyleSheet(rButtonStyleInfo.getSecondaryColorStyle());
     }
     else if(checked)
     {
-        ui->primaryColor->setStyleSheet(
-            PrimaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setPrimaryColor(colorList.at("grey"));
+
+        ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
 
 }
@@ -202,45 +197,36 @@ void MainWindow::on_grey_toggled(bool checked)
 
 void MainWindow::on_brown_toggled(bool checked)
 {
-    selectedColor = "QRadioButton::indicator {"
-                    "background-color: brown;"
-                    "}";
-    if(isSecondaryChecked)
+    if(rButtonStyleInfo.getIsSecondarySelected())
     {
-        ui->secondaryColor->setStyleSheet(
-            secondaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setSecondaryColor(colorList.at("brown"));
+
+        ui->secondaryColor->setStyleSheet(rButtonStyleInfo.getSecondaryColorStyle());
     }
     else if(checked)
     {
-        ui->primaryColor->setStyleSheet(
-            PrimaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setPrimaryColor(colorList.at("brown"));
+
+        ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
+
 
 }
 
 
 void MainWindow::on_red_toggled(bool checked)
 {
-    selectedColor = "QRadioButton::indicator {"
-                    "background-color: red;"
-                    "}";
-    if(isSecondaryChecked)
+    if(rButtonStyleInfo.getIsSecondarySelected())
     {
-        ui->secondaryColor->setStyleSheet(
-            secondaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setSecondaryColor(colorList.at("red"));
+
+        ui->secondaryColor->setStyleSheet(rButtonStyleInfo.getSecondaryColorStyle());
     }
     else if(checked)
     {
-        ui->primaryColor->setStyleSheet(
-            PrimaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setPrimaryColor(colorList.at("red"));
+
+        ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
 
 }
@@ -248,22 +234,17 @@ void MainWindow::on_red_toggled(bool checked)
 
 void MainWindow::on_orange_toggled(bool checked)
 {
-    selectedColor = "QRadioButton::indicator {"
-                    "background-color: orange;"
-                    "}";
-    if(isSecondaryChecked)
+    if(rButtonStyleInfo.getIsSecondarySelected())
     {
-        ui->secondaryColor->setStyleSheet(
-            secondaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setSecondaryColor(colorList.at("orange"));
+
+        ui->secondaryColor->setStyleSheet(rButtonStyleInfo.getSecondaryColorStyle());
     }
     else if(checked)
     {
-        ui->primaryColor->setStyleSheet(
-            PrimaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setPrimaryColor(colorList.at("orange"));
+
+        ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
 
 }
@@ -271,91 +252,74 @@ void MainWindow::on_orange_toggled(bool checked)
 
 void MainWindow::on_green_toggled(bool checked)
 {
-    selectedColor = "QRadioButton::indicator {"
-                    "background-color: green;"
-                    "}";
-    if(isSecondaryChecked)
+    if(rButtonStyleInfo.getIsSecondarySelected())
     {
-        ui->secondaryColor->setStyleSheet(
-            secondaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setSecondaryColor(colorList.at("green"));
+
+        ui->secondaryColor->setStyleSheet(rButtonStyleInfo.getSecondaryColorStyle());
     }
     else if(checked)
     {
-        ui->primaryColor->setStyleSheet(
-            PrimaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setPrimaryColor(colorList.at("green"));
+
+        ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
+
 
 }
 
 
 void MainWindow::on_yellow_toggled(bool checked)
 {
-    selectedColor = "QRadioButton::indicator {"
-                    "background-color: yellow;"
-                    "}";
-    if(isSecondaryChecked)
+    if(rButtonStyleInfo.getIsSecondarySelected())
     {
-        ui->secondaryColor->setStyleSheet(
-            secondaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setSecondaryColor(colorList.at("yellow"));
+
+        ui->secondaryColor->setStyleSheet(rButtonStyleInfo.getSecondaryColorStyle());
     }
     else if(checked)
     {
-        ui->primaryColor->setStyleSheet(
-            PrimaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setPrimaryColor(colorList.at("yellow"));
+
+        ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
+
 
 }
 
 
 void MainWindow::on_lightBlue_toggled(bool checked)
 {
-    selectedColor = "QRadioButton::indicator {"
-                    "background-color: lightBlue;"
-                    "}";
-    if(isSecondaryChecked)
+    if(rButtonStyleInfo.getIsSecondarySelected())
     {
-        ui->secondaryColor->setStyleSheet(
-            secondaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setSecondaryColor(colorList.at("lightBlue"));
+
+        ui->secondaryColor->setStyleSheet(rButtonStyleInfo.getSecondaryColorStyle());
     }
     else if(checked)
     {
-        ui->primaryColor->setStyleSheet(
-            PrimaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setPrimaryColor(colorList.at("lightBlue"));
+
+        ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
+
 
 }
 
 
 void MainWindow::on_darkBlue_toggled(bool checked)
 {
-    selectedColor = "QRadioButton::indicator {"
-                    "background-color: darkBlue;"
-                    "}";
-    if(isSecondaryChecked)
+    if(rButtonStyleInfo.getIsSecondarySelected())
     {
-        ui->secondaryColor->setStyleSheet(
-            secondaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setSecondaryColor(colorList.at("darkBlue"));
+
+        ui->secondaryColor->setStyleSheet(rButtonStyleInfo.getSecondaryColorStyle());
     }
     else if(checked)
     {
-        ui->primaryColor->setStyleSheet(
-            PrimaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setPrimaryColor(colorList.at("darkBlue"));
+
+        ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
 
 }
@@ -363,45 +327,36 @@ void MainWindow::on_darkBlue_toggled(bool checked)
 
 void MainWindow::on_purple_toggled(bool checked)
 {
-    selectedColor = "QRadioButton::indicator {"
-                    "background-color: purple;"
-                    "}";
-    if(isSecondaryChecked)
+    if(rButtonStyleInfo.getIsSecondarySelected())
     {
-        ui->secondaryColor->setStyleSheet(
-            secondaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setSecondaryColor(colorList.at("purple"));
+
+        ui->secondaryColor->setStyleSheet(rButtonStyleInfo.getSecondaryColorStyle());
     }
     else if(checked)
     {
-        ui->primaryColor->setStyleSheet(
-            PrimaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setPrimaryColor(colorList.at("purple"));
+
+        ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
+
 
 }
 
 
 void MainWindow::on_whiteRbutton_toggled(bool checked)
 {
-    selectedColor = "QRadioButton::indicator {"
-                    "background-color: white;"
-                    "}";
-    if(isSecondaryChecked)
+    if(rButtonStyleInfo.getIsSecondarySelected())
     {
-        ui->secondaryColor->setStyleSheet(
-            secondaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setSecondaryColor(colorList.at("white"));
+
+        ui->secondaryColor->setStyleSheet(rButtonStyleInfo.getSecondaryColorStyle());
     }
     else if(checked)
     {
-        ui->primaryColor->setStyleSheet(
-            PrimaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setPrimaryColor(colorList.at("white"));
+
+        ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
 
 }
@@ -409,22 +364,17 @@ void MainWindow::on_whiteRbutton_toggled(bool checked)
 
 void MainWindow::on_lightGrey_toggled(bool checked)
 {
-    selectedColor = "QRadioButton::indicator {"
-                    "background-color: lightGrey;"
-                    "}";
-    if(isSecondaryChecked)
+    if(rButtonStyleInfo.getIsSecondarySelected())
     {
-        ui->secondaryColor->setStyleSheet(
-            secondaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setSecondaryColor(colorList.at("lightGrey"));
+
+        ui->secondaryColor->setStyleSheet(rButtonStyleInfo.getSecondaryColorStyle());
     }
     else if(checked)
     {
-        ui->primaryColor->setStyleSheet(
-            PrimaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setPrimaryColor(colorList.at("lightGrey"));
+
+        ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
 
 }
@@ -432,22 +382,17 @@ void MainWindow::on_lightGrey_toggled(bool checked)
 
 void MainWindow::on_sandyBrown_toggled(bool checked)
 {
-    selectedColor = "QRadioButton::indicator {"
-                    "background-color: sandyBrown;"
-                    "}";
-    if(isSecondaryChecked)
+    if(rButtonStyleInfo.getIsSecondarySelected())
     {
-        ui->secondaryColor->setStyleSheet(
-            secondaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setSecondaryColor(colorList.at("sandyBrown"));
+
+        ui->secondaryColor->setStyleSheet(rButtonStyleInfo.getSecondaryColorStyle());
     }
     else if(checked)
     {
-        ui->primaryColor->setStyleSheet(
-            PrimaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setPrimaryColor(colorList.at("sandyBrown"));
+
+        ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
 
 }
@@ -455,22 +400,17 @@ void MainWindow::on_sandyBrown_toggled(bool checked)
 
 void MainWindow::on_pink_toggled(bool checked)
 {
-    selectedColor = "QRadioButton::indicator {"
-                    "background-color: pink;"
-                    "}";
-    if(isSecondaryChecked)
+    if(rButtonStyleInfo.getIsSecondarySelected())
     {
-        ui->secondaryColor->setStyleSheet(
-            secondaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setSecondaryColor(colorList.at("pink"));
+
+        ui->secondaryColor->setStyleSheet(rButtonStyleInfo.getSecondaryColorStyle());
     }
     else if(checked)
     {
-        ui->primaryColor->setStyleSheet(
-            PrimaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setPrimaryColor(colorList.at("pink"));
+
+        ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
 
 }
@@ -478,114 +418,94 @@ void MainWindow::on_pink_toggled(bool checked)
 
 void MainWindow::on_gold_toggled(bool checked)
 {
-    selectedColor = "QRadioButton::indicator {"
-                    "background-color: gold;"
-                    "}";
-    if(isSecondaryChecked)
+
+    if(rButtonStyleInfo.getIsSecondarySelected())
     {
-        ui->secondaryColor->setStyleSheet(
-            secondaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setSecondaryColor(colorList.at("gold"));
+
+        ui->secondaryColor->setStyleSheet(rButtonStyleInfo.getSecondaryColorStyle());
     }
     else if(checked)
     {
-        ui->primaryColor->setStyleSheet(
-            PrimaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setPrimaryColor(colorList.at("gold"));
+
+        ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
+
 
 }
 
 
 void MainWindow::on_lightYellow_toggled(bool checked)
 {
-    selectedColor = "QRadioButton::indicator {"
-                    "background-color: lightYellow;"
-                    "}";
-    if(isSecondaryChecked)
+    if(rButtonStyleInfo.getIsSecondarySelected())
     {
-        ui->secondaryColor->setStyleSheet(
-            secondaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setSecondaryColor(colorList.at("lightYellow"));
+
+        ui->secondaryColor->setStyleSheet(rButtonStyleInfo.getSecondaryColorStyle());
     }
     else if(checked)
     {
-        ui->primaryColor->setStyleSheet(
-            PrimaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setPrimaryColor(colorList.at("lightYellow"));
+
+        ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
+
 
 }
 
 
 void MainWindow::on_lightGreen_toggled(bool checked)
 {
-    selectedColor = "QRadioButton::indicator {"
-                    "background-color: lightGreen;"
-                    "}";
-    if(isSecondaryChecked)
+    if(rButtonStyleInfo.getIsSecondarySelected())
     {
-        ui->secondaryColor->setStyleSheet(
-            secondaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setSecondaryColor(colorList.at("lightGreen"));
+
+        ui->secondaryColor->setStyleSheet(rButtonStyleInfo.getSecondaryColorStyle());
     }
     else if(checked)
     {
-        ui->primaryColor->setStyleSheet(
-            PrimaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setPrimaryColor(colorList.at("lightGreen"));
+
+        ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
+
 
 }
 
 
 void MainWindow::on_cyan_toggled(bool checked)
 {
-    selectedColor = "QRadioButton::indicator {"
-                    "background-color: cyan;"
-                    "}";
-    if(isSecondaryChecked)
+    if(rButtonStyleInfo.getIsSecondarySelected())
     {
-        ui->secondaryColor->setStyleSheet(
-            secondaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setSecondaryColor(colorList.at("cyan"));
+
+        ui->secondaryColor->setStyleSheet(rButtonStyleInfo.getSecondaryColorStyle());
     }
     else if(checked)
     {
-        ui->primaryColor->setStyleSheet(
-            PrimaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setPrimaryColor(colorList.at("cyan"));
+
+        ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
+
 
 }
 
 
 void MainWindow::on_darkCyan_toggled(bool checked)
 {
-    selectedColor = "QRadioButton::indicator {"
-                    "background-color: darkCyan;"
-                    "}";
-    if(isSecondaryChecked)
+    if(rButtonStyleInfo.getIsSecondarySelected())
     {
-        ui->secondaryColor->setStyleSheet(
-            secondaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setSecondaryColor(colorList.at("darkCyan"));
+
+        ui->secondaryColor->setStyleSheet(rButtonStyleInfo.getSecondaryColorStyle());
     }
     else if(checked)
     {
-        ui->primaryColor->setStyleSheet(
-            PrimaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setPrimaryColor(colorList.at("darkCyan"));
+
+        ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
 
 }
@@ -593,23 +513,17 @@ void MainWindow::on_darkCyan_toggled(bool checked)
 
 void MainWindow::on_mediumPurple_toggled(bool checked)
 {
-    selectedColor = "QRadioButton::indicator {"
-                    "background-color: mediumPurple;"
-                    "}";
-    if(isSecondaryChecked)
+    if(rButtonStyleInfo.getIsSecondarySelected())
     {
-        ui->secondaryColor->setStyleSheet(
-            secondaryColorStyle +
-            selectedColor +
-             "border: 2px solid blue;"
-            );
+        rButtonStyleInfo.setSecondaryColor(colorList.at("mediumPurple"));
+
+        ui->secondaryColor->setStyleSheet(rButtonStyleInfo.getSecondaryColorStyle());
     }
     else if(checked)
     {
-        ui->primaryColor->setStyleSheet(
-            PrimaryColorStyle +
-            selectedColor
-            );
+        rButtonStyleInfo.setPrimaryColor(colorList.at("mediumPurple"));
+
+        ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
 
 }
@@ -617,61 +531,22 @@ void MainWindow::on_mediumPurple_toggled(bool checked)
 
 void MainWindow::on_secondaryColor_toggled(bool checked)
 {
-    if(checked)
-    {
-         isSecondaryChecked = true;
+    rButtonStyleInfo.setIsSecondarySelected(checked);
 
-        QString secondaryCurrentStyle = ui->secondaryColor->styleSheet();
+    ui->secondaryColor->setStyleSheet(rButtonStyleInfo.getSecondaryColorStyle());
 
-        ui->secondaryColor->setStyleSheet(
-            secondaryCurrentStyle +
-            "QRadioButton::indicator {"
-            "border: 2px solid blue;"
-            "}"
-            );
-
-        QString primaryCurrentStyle = ui->primaryColor->styleSheet();
-
-         ui->primaryColor->setStyleSheet(
-             primaryCurrentStyle +
-             "QRadioButton::indicator {"
-             "border: 2px solid black;"
-             "}"
-             );
-
-
-    }
-
+    ui->primaryColor->setStyleSheet(defaultRadioButtonStyle.arg(rButtonStyleInfo.getPrimaryColor()));
 
 }
 
 
 void MainWindow::on_primaryColor_toggled(bool checked)
 {
-    if(checked)
-    {
-        isSecondaryChecked = false;
+    rButtonStyleInfo.setIsSecondarySelected(!checked);
 
-        QString primaryCurrentStyle = ui->primaryColor->styleSheet();
+    ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
 
-        ui->primaryColor->setStyleSheet(
-            primaryCurrentStyle +
-            "QRadioButton::indicator {"
-            "border: 2px solid blue;"
-            "}"
-            );
-
-        QString secondaryCurrentStyle = ui->secondaryColor->styleSheet();
-
-        ui->secondaryColor->setStyleSheet(
-            secondaryCurrentStyle +
-            "QRadioButton::indicator {"
-            "border: 2px solid black;"
-            "}"
-            );
-    }
-
-
+    ui->secondaryColor->setStyleSheet(defaultRadioButtonStyle.arg(rButtonStyleInfo.getSecondaryColor()));
 
 }
 
