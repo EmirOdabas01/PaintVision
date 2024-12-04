@@ -21,7 +21,9 @@ MainWindow::MainWindow(QWidget *parent)
                               "border: 2px solid black; "
                               "background-color: %1;"
                               "}";
+    view = ui->graphicsView;
 
+    connect(view, &CustomView::cordinateChanged, this, &MainWindow::updateCordinate);
 
 }
 
@@ -29,7 +31,11 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
-
+void MainWindow::updateCordinate(const QPointF &newCordinate)
+{
+    cordinate = newCordinate;
+    qDebug() << "cordinates: " << cordinate;
+}
 
 void MainWindow::on_actionOpen_triggered()
 {
@@ -45,8 +51,8 @@ void MainWindow::on_actionOpen_triggered()
             return;
         }
 
-        if(Main_image.rows > 800 || Main_image.cols > 600)
-            cv::resize(Main_image, Main_image, cv::Size(800, 600));
+       // if(Main_image.rows > 800 || Main_image.cols > 600)
+         //   cv::resize(Main_image, Main_image, cv::Size(800, 600));
 
         show_image();
     }

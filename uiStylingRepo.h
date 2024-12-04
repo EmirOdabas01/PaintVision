@@ -6,6 +6,10 @@
 class colorStyleInfo{
 public:
 
+    colorStyleInfo& operator=(const colorStyleInfo&) = delete;
+    colorStyleInfo& operator=(const colorStyleInfo&&) = delete;
+
+
     void setPrimaryColor(QString color);
     void setSecondaryColor(QString color);
     void setIsSecondarySelected(bool selected);

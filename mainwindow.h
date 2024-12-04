@@ -9,7 +9,16 @@
 #include <QImage>
 #include <QGraphicsScene>
 #include "uiStylingRepo.h"
+<<<<<<< HEAD
+=======
+#include <QGraphicsView>
+#include <QGraphicsScene>
+#include <QMouseEvent>
+#include <QMessageBox>
+#include "customview.h"
+>>>>>>> bf7aead (Customize QGraphicsView for mouse tracking and circle class implementation)
 
+#include "circle.h"
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -23,6 +32,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
 
 private slots:
     void on_actionOpen_triggered();
@@ -87,6 +97,7 @@ private slots:
 
     void on_primaryColor_toggled(bool checked);
 
+    void updateCordinate(const QPointF &newCordinate);
 private:
     Ui::MainWindow *ui;
 
@@ -98,7 +109,13 @@ private:
 
     colorStyleInfo& rButtonStyleInfo = colorStyleInfo::getInstance();
 
+    circle& diskForPainting = circle::getInstance();
+
     QString defaultRadioButtonStyle;
+
+    QPointF cordinate;
+
+    CustomView *view;
 
 };
 #endif // MAINWINDOW_H
