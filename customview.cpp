@@ -12,6 +12,9 @@ void CustomView::mousePressEvent(QMouseEvent* event)
     QPoint viewPos = event->pos();
     QPointF scenePos = this->mapToScene(viewPos);
 
+
     emit cordinateChanged(scenePos);
 
+
+    qDebug() << "Scene Position: " << scenePos;
 }

@@ -19,7 +19,7 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
+  <widget class="QWidget" name="centralidget">
    <property name="sizePolicy">
     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
      <horstretch>0</horstretch>
@@ -952,7 +952,7 @@
      </spacer>
     </item>
     <item>
-     <widget class="QGraphicsView" name="graphicsView">
+     <widget class="CustomView" name="graphicsView">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
         <horstretch>20</horstretch>
@@ -1081,6 +1081,13 @@
    </property>
   </action>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CustomView</class>
+   <extends>QGraphicsView</extends>
+   <header>customview.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="icons.qrc"/>
  </resources>

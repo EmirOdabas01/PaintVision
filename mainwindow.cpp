@@ -71,6 +71,8 @@ void MainWindow::show_image()
 
     ui->graphicsView->setSceneRect(img_to_pix.rect());
 
+
+
 }
 
 void MainWindow::on_actionNew_triggered()

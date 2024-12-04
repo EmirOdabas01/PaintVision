@@ -9,14 +9,14 @@
 #include <QImage>
 #include <QGraphicsScene>
 #include "uiStylingRepo.h"
-<<<<<<< HEAD
-=======
+
+
 #include <QGraphicsView>
 #include <QGraphicsScene>
 #include <QMouseEvent>
 #include <QMessageBox>
 #include "customview.h"
->>>>>>> bf7aead (Customize QGraphicsView for mouse tracking and circle class implementation)
+
 
 #include "circle.h"
 QT_BEGIN_NAMESPACE
