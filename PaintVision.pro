@@ -9,18 +9,17 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-<<<<<<< HEAD
     circle.cpp \
     customview.cpp \
     main.cpp \
     mainwindow.cpp \
-    uiStylingRepo.cpp
+    uiStylingRepo.cpp\
 
 HEADERS += \
     circle.h \
     customview.h \
     mainwindow.h \
-    uiStylingRepo.h
+    uiStylingRepo.h\
 
 FORMS += \
     mainwindow.ui
