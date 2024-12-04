@@ -558,3 +558,15 @@ void MainWindow::on_primaryColor_toggled(bool checked)
 
 }
 
+
+
+
+void MainWindow::on_penButton_toggled(bool checked)
+{
+
+    componentInfo.setIsPenSlc(checked);
+        qDebug() <<  "pen is clicked   " << componentInfo.getIsPenSlc();
+
+
+}
+

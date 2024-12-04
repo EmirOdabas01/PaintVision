@@ -16,7 +16,7 @@
 #include <QMouseEvent>
 #include <QMessageBox>
 #include "customview.h"
-
+#include "btnselectinfo.h"
 
 #include "circle.h"
 QT_BEGIN_NAMESPACE
@@ -98,6 +98,10 @@ private slots:
     void on_primaryColor_toggled(bool checked);
 
     void updateCordinate(const QPointF &newCordinate);
+    void on_penButton_clicked(bool checked);
+
+    void on_penButton_toggled(bool checked);
+
 private:
     Ui::MainWindow *ui;
 
@@ -116,6 +120,8 @@ private:
     QPointF cordinate;
 
     CustomView *view;
+
+    btnSelectInfo& componentInfo = btnSelectInfo::getInstance();
 
 };
 #endif // MAINWINDOW_H

@@ -9,6 +9,7 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    btnselectinfo.cpp \
     circle.cpp \
     customview.cpp \
     main.cpp \
@@ -16,6 +17,7 @@ SOURCES += \
     uiStylingRepo.cpp\
 
 HEADERS += \
+    btnselectinfo.h \
     circle.h \
     customview.h \
     mainwindow.h \
