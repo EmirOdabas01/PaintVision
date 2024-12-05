@@ -12,5 +12,8 @@
         <file>icons/vertiicalFlip.png</file>
         <file>icons/rotate180.png</file>
         <file>icons/transpose.png</file>
+        <file>icons/penCursor.png</file>
+        <file>icons/cursor.png</file>
+        <file>icons/refresh.png</file>
     </qresource>
 </RCC>

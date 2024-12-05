@@ -537,12 +537,19 @@ void MainWindow::on_mediumPurple_toggled(bool checked)
 
         ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
-
 }
 
 void MainWindow::on_penBtn_toggled(bool checked)
 {
     componentInfo.setIsPenSlc(checked);
+
+    if(componentInfo.getIsPenSlc())
+    {
+        QPixmap newCursor(":/new/menuIcons/icons/penCursor");
+        QPixmap scaledPixmap = newCursor.scaled(16, 16, Qt::KeepAspectRatio);
+        QCursor customCursor(scaledPixmap);
+        this->setCursor(customCursor);
+    }
 }
 
 
@@ -575,12 +582,9 @@ void MainWindow::on_magnifierBtn_toggled(bool checked)
     componentInfo.setIsMagnifierSlc(checked);
 }
 
-
 void MainWindow::on_paintRadius_valueChanged(int value)
 {
     diskForPainting.setRadius(value);
-
-    qDebug() << "radius: " << diskForPainting.getRadius();
 }
 
 void MainWindow::paintFuncNav()
@@ -593,12 +597,10 @@ void MainWindow::drawToScene()
     if(rButtonStyleInfo.getIsSecondarySelected())
     {
         diskForPainting.setColor(rButtonStyleInfo.getSecondaryColor());
-        qDebug() << "secondary sselected";
     }
     else
     {
         diskForPainting.setColor(rButtonStyleInfo.getPrimaryColor());
-        qDebug() << "primary selected";
     }
 
     cv::circle(Main_image,
@@ -625,24 +627,27 @@ void MainWindow::on_isFilled_toggled(bool checked)
 
 void MainWindow::on_primaryColor_clicked()
 {
-
     rButtonStyleInfo.setIsSecondarySelected(false);
 
     ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
 
     ui->secondaryColor->setStyleSheet(defaultRadioButtonStyle.arg(rButtonStyleInfo.getSecondaryColor()));
-
 }
 
 
 void MainWindow::on_secondaryColor_clicked()
 {
-
     rButtonStyleInfo.setIsSecondarySelected(true);
 
     ui->secondaryColor->setStyleSheet(rButtonStyleInfo.getSecondaryColorStyle());
 
     ui->primaryColor->setStyleSheet(defaultRadioButtonStyle.arg(rButtonStyleInfo.getPrimaryColor()));
+}
 
+
+void MainWindow::on_cursor_toggled(bool checked)
+{
+    if(checked)
+        this->setCursor(Qt::ArrowCursor);
 }
 

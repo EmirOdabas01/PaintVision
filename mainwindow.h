@@ -122,6 +122,8 @@ private slots:
 
     void on_secondaryColor_clicked();
 
+    void on_cursor_toggled(bool checked);
+
 private:
     Ui::MainWindow *ui;
 
