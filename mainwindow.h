@@ -93,14 +93,34 @@ private slots:
 
     void on_mediumPurple_toggled(bool checked);
 
-    void on_secondaryColor_toggled(bool checked);
+    //void on_secondaryColor_toggled(bool checked);
 
-    void on_primaryColor_toggled(bool checked);
+    //void on_primaryColor_toggled(bool checked);
 
     void updateCordinate(const QPointF &newCordinate);
-    void on_penButton_clicked(bool checked);
+    void on_penBtn_toggled(bool checked);
 
-    void on_penButton_toggled(bool checked);
+    void on_fillBtn_toggled(bool checked);
+
+    void on_textBtn_toggled(bool checked);
+
+    void on_brushBtn_toggled(bool checked);
+
+    void on_clrPickBtn_toggled(bool checked);
+
+    void on_magnifierBtn_toggled(bool checked);
+
+    void on_paintRadius_valueChanged(int value);
+
+    void paintFuncNav(); // decides which operation will be performed
+
+    void drawToScene();
+
+    void on_isFilled_toggled(bool checked);
+
+    void on_primaryColor_clicked();
+
+    void on_secondaryColor_clicked();
 
 private:
     Ui::MainWindow *ui;

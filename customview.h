@@ -17,7 +17,7 @@ signals:
 
 protected:
     void mousePressEvent(QMouseEvent* event) override;
-
+     void mouseMoveEvent(QMouseEvent* event) override;
     //explicit CustomView(QWidget *parent = nullptr) : QGraphicsView(parent) {}
 
 };

@@ -102,176 +102,216 @@
        </layout>
       </item>
       <item>
-       <layout class="QGridLayout" name="gridLayout">
-        <property name="rightMargin">
-         <number>0</number>
+       <widget class="QWidget" name="widget" native="true">
+        <property name="styleSheet">
+         <string notr="true">QRadioButton::indicator {
+    width: 0px;
+    height: 0px;
+	border:none;
+}
+
+QRadioButton:checked {
+    border: 2px solid blue; 
+    border-radius: 5px;     
+}
+</string>
         </property>
-        <item row="1" column="1">
-         <widget class="QPushButton" name="colorPickButton">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>50</width>
-            <height>50</height>
-           </size>
-          </property>
-          <property name="toolTip">
-           <string>Color Pick</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset resource="icons.qrc">
-            <normaloff>:/new/menuIcons/icons/colorPick.png</normaloff>:/new/menuIcons/icons/colorPick.png</iconset>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QPushButton" name="brushButton">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>50</width>
-            <height>50</height>
-           </size>
-          </property>
-          <property name="toolTip">
-           <string>Brush</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset resource="icons.qrc">
-            <normaloff>:/new/menuIcons/icons/eraser.png</normaloff>:/new/menuIcons/icons/eraser.png</iconset>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="0">
-         <widget class="QPushButton" name="penButton">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>50</width>
-            <height>50</height>
-           </size>
-          </property>
-          <property name="toolTip">
-           <string>Pen</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset resource="icons.qrc">
-            <normaloff>:/new/menuIcons/icons/pen.png</normaloff>:/new/menuIcons/icons/pen.png</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="checked">
-           <bool>false</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QPushButton" name="fillButton">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>50</width>
-            <height>50</height>
-           </size>
-          </property>
-          <property name="toolTip">
-           <string>Fill</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset resource="icons.qrc">
-            <normaloff>:/new/menuIcons/icons/fill.png</normaloff>:/new/menuIcons/icons/fill.png</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="2">
-         <widget class="QPushButton" name="textButton">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>50</width>
-            <height>50</height>
-           </size>
-          </property>
-          <property name="toolTip">
-           <string>Add Text</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset resource="icons.qrc">
-            <normaloff>:/new/menuIcons/icons/text.png</normaloff>:/new/menuIcons/icons/text.png</iconset>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="2">
-         <widget class="QPushButton" name="magnifierButton">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>50</width>
-            <height>50</height>
-           </size>
-          </property>
-          <property name="toolTip">
-           <string>Magnifier</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset resource="icons.qrc">
-            <normaloff>:/new/menuIcons/icons/magnifier.png</normaloff>:/new/menuIcons/icons/magnifier.png</iconset>
-          </property>
-         </widget>
-        </item>
-       </layout>
+        <layout class="QGridLayout" name="gridLayout">
+         <property name="rightMargin">
+          <number>1</number>
+         </property>
+         <item row="1" column="1">
+          <widget class="QRadioButton" name="clrPickBtn">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>30</horstretch>
+             <verstretch>30</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="icons.qrc">
+             <normaloff>:/new/menuIcons/icons/colorPick.png</normaloff>:/new/menuIcons/icons/colorPick.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QRadioButton" name="fillBtn">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>30</horstretch>
+             <verstretch>30</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="icons.qrc">
+             <normaloff>:/new/menuIcons/icons/fill.png</normaloff>:/new/menuIcons/icons/fill.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QRadioButton" name="textBtn">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>30</horstretch>
+             <verstretch>30</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="icons.qrc">
+             <normaloff>:/new/menuIcons/icons/text.png</normaloff>:/new/menuIcons/icons/text.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QRadioButton" name="penBtn">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>30</horstretch>
+             <verstretch>30</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="baseSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="icons.qrc">
+             <normaloff>:/new/menuIcons/icons/pen.png</normaloff>:/new/menuIcons/icons/pen.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QRadioButton" name="brushBtn">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>30</horstretch>
+             <verstretch>30</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="icons.qrc">
+             <normaloff>:/new/menuIcons/icons/eraser.png</normaloff>:/new/menuIcons/icons/eraser.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QRadioButton" name="magnifierBtn">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>30</horstretch>
+             <verstretch>30</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="icons.qrc">
+             <normaloff>:/new/menuIcons/icons/magnifier.png</normaloff>:/new/menuIcons/icons/magnifier.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3" rowspan="2">
+          <widget class="QRadioButton" name="radioButton">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </item>
       <item>
        <layout class="QGridLayout" name="gridLayout_2">
@@ -941,6 +981,57 @@
          </size>
         </property>
        </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QSlider" name="paintRadius">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>50</horstretch>
+          <verstretch>50</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="baseSize">
+         <size>
+          <width>50</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>50</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="isFilled">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>filled</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>

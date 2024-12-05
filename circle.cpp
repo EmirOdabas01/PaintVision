@@ -1,8 +1,8 @@
 #include "circle.h"
 
-circle::circle() : radius(2), color(0, 0, 0), thickness(1), lineType(cv::LINE_8), shift(0) {}
+circle::circle() : radius(2), color(0, 0, 0), filled(1) {}
 
- cv::Point circle::getCenter()
+cv::Point circle::getCenter()
 {
     return center;
 }
@@ -16,20 +16,9 @@ cv::Scalar circle::getColor()
 {
     return color;
 }
-
-int circle::getThickness()
+int circle::getFilled()
 {
-    return thickness;
-}
-
-int circle::getLineType()
-{
-    return lineType;
-}
-
-int circle::getShift()
-{
-    return shift;
+    return filled;
 }
 
 void circle::setCenter(cv::Point newCenter)
@@ -42,25 +31,22 @@ void circle::setRadius(int newRadius)
     radius = newRadius;
 }
 
-void circle::setColor(cv::Scalar newColor)
+void circle::setColor(QString newColor)
 {
-    color = newColor;
+    QString rgbHex = newColor.mid(1);
+
+    int red = rgbHex.mid(0, 2).toInt(nullptr, 16);
+    int green = rgbHex.mid(2, 2).toInt(nullptr, 16);
+    int blue = rgbHex.mid(4, 2).toInt(nullptr, 16);
+
+    color = cv::Scalar(blue, green, red);
 }
 
-void circle::setThickness(int newThickness)
+void circle::setFilled(int lineType)
 {
-    thickness = newThickness;
+    filled = lineType;
 }
 
-void circle::setLineType(int newLineType)
-{
-    lineType = newLineType;
-}
-
-void circle::setShift(int newShift)
-{
-    shift = newShift;
-}
 circle& circle::getInstance()
 {
     static circle instance;

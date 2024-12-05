@@ -15,3 +15,11 @@ void CustomView::mousePressEvent(QMouseEvent* event)
 
     emit cordinateChanged(scenePos);
 }
+void CustomView::mouseMoveEvent(QMouseEvent* event)
+{
+    QPoint viewPos = event->pos();
+    QPointF scenePos = this->mapToScene(viewPos);
+
+
+    emit cordinateChanged(scenePos);
+}

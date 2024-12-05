@@ -2,7 +2,7 @@
 #include "ui_mainwindow.h"
 #include <QFileDialog>
 #include <QMessageBox>
-
+#include  "btnselectinfo.h"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -25,6 +25,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(view, &CustomView::cordinateChanged, this, &MainWindow::updateCordinate);
 
+    on_primaryColor_clicked();
+
 }
 
 MainWindow::~MainWindow()
@@ -34,7 +36,9 @@ MainWindow::~MainWindow()
 void MainWindow::updateCordinate(const QPointF &newCordinate)
 {
     cordinate = newCordinate;
-    qDebug() << "cordinates: " << cordinate;
+    diskForPainting.setCenter(cv::Point(newCordinate.x(), newCordinate.y()));
+
+    paintFuncNav();
 }
 
 void MainWindow::on_actionOpen_triggered()
@@ -536,21 +540,93 @@ void MainWindow::on_mediumPurple_toggled(bool checked)
 
 }
 
-
-void MainWindow::on_secondaryColor_toggled(bool checked)
+void MainWindow::on_penBtn_toggled(bool checked)
 {
-    rButtonStyleInfo.setIsSecondarySelected(checked);
-
-    ui->secondaryColor->setStyleSheet(rButtonStyleInfo.getSecondaryColorStyle());
-
-    ui->primaryColor->setStyleSheet(defaultRadioButtonStyle.arg(rButtonStyleInfo.getPrimaryColor()));
-
+    componentInfo.setIsPenSlc(checked);
 }
 
 
-void MainWindow::on_primaryColor_toggled(bool checked)
+void MainWindow::on_fillBtn_toggled(bool checked)
 {
-    rButtonStyleInfo.setIsSecondarySelected(!checked);
+    componentInfo.setIsFillSlc(checked);
+}
+
+
+void MainWindow::on_textBtn_toggled(bool checked)
+{
+    componentInfo.setIsTextSlc(checked);
+}
+
+
+void MainWindow::on_brushBtn_toggled(bool checked)
+{
+    componentInfo.setIsBrushSlc(checked);
+}
+
+
+void MainWindow::on_clrPickBtn_toggled(bool checked)
+{
+    componentInfo.setIsClrPickSlc(checked);
+}
+
+
+void MainWindow::on_magnifierBtn_toggled(bool checked)
+{
+    componentInfo.setIsMagnifierSlc(checked);
+}
+
+
+void MainWindow::on_paintRadius_valueChanged(int value)
+{
+    diskForPainting.setRadius(value);
+
+    qDebug() << "radius: " << diskForPainting.getRadius();
+}
+
+void MainWindow::paintFuncNav()
+{
+    if(componentInfo.getIsPenSlc()) drawToScene();
+}
+
+void MainWindow::drawToScene()
+{
+    if(rButtonStyleInfo.getIsSecondarySelected())
+    {
+        diskForPainting.setColor(rButtonStyleInfo.getSecondaryColor());
+        qDebug() << "secondary sselected";
+    }
+    else
+    {
+        diskForPainting.setColor(rButtonStyleInfo.getPrimaryColor());
+        qDebug() << "primary selected";
+    }
+
+    cv::circle(Main_image,
+               diskForPainting.getCenter(),
+               diskForPainting.getRadius(),
+               diskForPainting.getColor(),
+               diskForPainting.getFilled());
+
+    show_image();
+}
+
+void MainWindow::on_isFilled_toggled(bool checked)
+{
+    if(checked)
+    {
+        diskForPainting.setFilled(cv::FILLED);
+    }
+    else
+    {
+        diskForPainting.setFilled(1);
+    }
+}
+
+
+void MainWindow::on_primaryColor_clicked()
+{
+
+    rButtonStyleInfo.setIsSecondarySelected(false);
 
     ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
 
@@ -559,14 +635,14 @@ void MainWindow::on_primaryColor_toggled(bool checked)
 }
 
 
-
-
-void MainWindow::on_penButton_toggled(bool checked)
+void MainWindow::on_secondaryColor_clicked()
 {
 
-    componentInfo.setIsPenSlc(checked);
-        qDebug() <<  "pen is clicked   " << componentInfo.getIsPenSlc();
+    rButtonStyleInfo.setIsSecondarySelected(true);
 
+    ui->secondaryColor->setStyleSheet(rButtonStyleInfo.getSecondaryColorStyle());
+
+    ui->primaryColor->setStyleSheet(defaultRadioButtonStyle.arg(rButtonStyleInfo.getPrimaryColor()));
 
 }
 

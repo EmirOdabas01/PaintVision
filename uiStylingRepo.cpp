@@ -1,7 +1,7 @@
 #include "uiStylingRepo.h"
 
 
-colorStyleInfo::colorStyleInfo() : isSecondarySelected(false) {}
+colorStyleInfo::colorStyleInfo() :  primaryColor("#000000"), secondaryColor("#ffffff"),isSecondarySelected(false) {}
 
 void colorStyleInfo::setPrimaryColor(QString color)
 {

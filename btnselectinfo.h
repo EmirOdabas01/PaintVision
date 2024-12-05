@@ -4,7 +4,6 @@
 class btnSelectInfo
 {
 public:
-
     btnSelectInfo& operator=(const btnSelectInfo&) = delete;
     btnSelectInfo& operator=(const btnSelectInfo&&) = delete;
 
@@ -26,8 +25,8 @@ public:
 private:
     btnSelectInfo();
 
-    bool isBrushSlc;
     bool isPenSlc;
+    bool isBrushSlc;
     bool isClrPickSlc;
     bool isMagnifierSlc;
     bool isFillSlc;

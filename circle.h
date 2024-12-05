@@ -1,6 +1,7 @@
 #ifndef CIRCLE_H
 #define CIRCLE_H
 #include <opencv2/opencv.hpp>
+#include <QString>
 class circle
 {
 public:
@@ -13,16 +14,12 @@ public:
     cv::Point getCenter();
     int getRadius();
     cv::Scalar getColor();
-    int getThickness();
-    int getLineType();
-    int getShift();
+    int getFilled();
 
+    void setFilled(int lineType);
     void setCenter(cv::Point newCenter);
     void setRadius(int newRadius);
-    void setColor(cv::Scalar newColor);
-    void setThickness(int newThickness);
-    void setLineType(int newLineType);
-    void setShift(int newShift);
+    void setColor(QString newColor);
 private:
 
      circle();
@@ -30,9 +27,7 @@ private:
     cv::Point center;
     int radius;
     cv::Scalar color;
-    int thickness;
-    int lineType;
-    int shift;
+    int filled;
 };
 
 #endif // CIRCLE_H
