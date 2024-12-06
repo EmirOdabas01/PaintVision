@@ -139,7 +139,7 @@ QRadioButton:checked {
            </property>
            <property name="icon">
             <iconset resource="icons.qrc">
-             <normaloff>:/new/menuIcons/icons/magnifier.png</normaloff>:/new/menuIcons/icons/magnifier.png</iconset>
+             <normaloff>:/new/menuIcons/icons/magnifierIcon.png</normaloff>:/new/menuIcons/icons/magnifierIcon.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -150,7 +150,7 @@ QRadioButton:checked {
           </widget>
          </item>
          <item row="1" column="0">
-          <widget class="QRadioButton" name="brushBtn">
+          <widget class="QRadioButton" name="eraserBtn">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>30</horstretch>
@@ -168,7 +168,7 @@ QRadioButton:checked {
            </property>
            <property name="icon">
             <iconset resource="icons.qrc">
-             <normaloff>:/new/menuIcons/icons/eraser.png</normaloff>:/new/menuIcons/icons/eraser.png</iconset>
+             <normaloff>:/new/menuIcons/icons/eraserCursor.png</normaloff>:/new/menuIcons/icons/eraserCursor.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -212,7 +212,7 @@ QRadioButton:checked {
            </property>
            <property name="icon">
             <iconset resource="icons.qrc">
-             <normaloff>:/new/menuIcons/icons/pen.png</normaloff>:/new/menuIcons/icons/pen.png</iconset>
+             <normaloff>:/new/menuIcons/icons/penIcon.png</normaloff>:/new/menuIcons/icons/penIcon.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -241,7 +241,7 @@ QRadioButton:checked {
            </property>
            <property name="icon">
             <iconset resource="icons.qrc">
-             <normaloff>:/new/menuIcons/icons/colorPick.png</normaloff>:/new/menuIcons/icons/colorPick.png</iconset>
+             <normaloff>:/new/menuIcons/icons/colorPickIcon.png</normaloff>:/new/menuIcons/icons/colorPickIcon.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -277,7 +277,7 @@ QRadioButton:checked {
            </property>
            <property name="icon">
             <iconset resource="icons.qrc">
-             <normaloff>:/new/menuIcons/icons/text.png</normaloff>:/new/menuIcons/icons/text.png</iconset>
+             <normaloff>:/new/menuIcons/icons/textIcon.png</normaloff>:/new/menuIcons/icons/textIcon.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -306,7 +306,7 @@ QRadioButton:checked {
            </property>
            <property name="icon">
             <iconset resource="icons.qrc">
-             <normaloff>:/new/menuIcons/icons/fill.png</normaloff>:/new/menuIcons/icons/fill.png</iconset>
+             <normaloff>:/new/menuIcons/icons/fillIcon.png</normaloff>:/new/menuIcons/icons/fillIcon.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -335,7 +335,7 @@ QRadioButton:checked {
            </property>
            <property name="icon">
             <iconset resource="icons.qrc">
-             <normaloff>:/new/menuIcons/icons/refresh.png</normaloff>:/new/menuIcons/icons/refresh.png</iconset>
+             <normaloff>:/new/menuIcons/icons/refreshIcon.png</normaloff>:/new/menuIcons/icons/refreshIcon.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -364,7 +364,7 @@ QRadioButton:checked {
            </property>
            <property name="icon">
             <iconset resource="icons.qrc">
-             <normaloff>:/new/menuIcons/icons/cursor.png</normaloff>:/new/menuIcons/icons/cursor.png</iconset>
+             <normaloff>:/new/menuIcons/icons/cursorIcon.png</normaloff>:/new/menuIcons/icons/cursorIcon.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -416,7 +416,7 @@ QRadioButton:checked {
           </property>
           <property name="icon">
            <iconset resource="icons.qrc">
-            <normaloff>:/new/menuIcons/icons/vertiicalFlip.png</normaloff>:/new/menuIcons/icons/vertiicalFlip.png</iconset>
+            <normaloff>:/new/menuIcons/icons/vertiicalFlipIcon.png</normaloff>:/new/menuIcons/icons/vertiicalFlipIcon.png</iconset>
           </property>
          </widget>
         </item>
@@ -454,7 +454,7 @@ QRadioButton:checked {
           </property>
           <property name="icon">
            <iconset resource="icons.qrc">
-            <normaloff>:/new/menuIcons/icons/horizontalFlip.png</normaloff>:/new/menuIcons/icons/horizontalFlip.png</iconset>
+            <normaloff>:/new/menuIcons/icons/horizontalFlipIcon.png</normaloff>:/new/menuIcons/icons/horizontalFlipIcon.png</iconset>
           </property>
          </widget>
         </item>
@@ -492,7 +492,7 @@ QRadioButton:checked {
           </property>
           <property name="icon">
            <iconset resource="icons.qrc">
-            <normaloff>:/new/menuIcons/icons/transpose.png</normaloff>:/new/menuIcons/icons/transpose.png</iconset>
+            <normaloff>:/new/menuIcons/icons/transposeIcon.png</normaloff>:/new/menuIcons/icons/transposeIcon.png</iconset>
           </property>
          </widget>
         </item>
@@ -530,7 +530,7 @@ QRadioButton:checked {
           </property>
           <property name="icon">
            <iconset resource="icons.qrc">
-            <normaloff>:/new/menuIcons/icons/rotateRight.png</normaloff>:/new/menuIcons/icons/rotateRight.png</iconset>
+            <normaloff>:/new/menuIcons/icons/rotateRightIcon.png</normaloff>:/new/menuIcons/icons/rotateRightIcon.png</iconset>
           </property>
          </widget>
         </item>
@@ -571,7 +571,7 @@ QRadioButton:checked {
           </property>
           <property name="icon">
            <iconset resource="icons.qrc">
-            <normaloff>:/new/menuIcons/icons/rotate180.png</normaloff>:/new/menuIcons/icons/rotate180.png</iconset>
+            <normaloff>:/new/menuIcons/icons/rotate180Icon.png</normaloff>:/new/menuIcons/icons/rotate180Icon.png</iconset>
           </property>
          </widget>
         </item>
@@ -609,7 +609,7 @@ QRadioButton:checked {
           </property>
           <property name="icon">
            <iconset resource="icons.qrc">
-            <normaloff>:/new/menuIcons/icons/rotateLeft.png</normaloff>:/new/menuIcons/icons/rotateLeft.png</iconset>
+            <normaloff>:/new/menuIcons/icons/rotateLeftIcon.png</normaloff>:/new/menuIcons/icons/rotateLeftIcon.png</iconset>
           </property>
          </widget>
         </item>

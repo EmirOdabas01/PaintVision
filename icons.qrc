@@ -1,19 +1,18 @@
 <RCC>
     <qresource prefix="/new/menuIcons">
-        <file>icons/colorPick.png</file>
-        <file>icons/eraser.png</file>
-        <file>icons/fill.png</file>
-        <file>icons/magnifier.png</file>
-        <file>icons/pen.png</file>
-        <file>icons/text.png</file>
-        <file>icons/rotateLeft.png</file>
-        <file>icons/rotateRight.png</file>
-        <file>icons/horizontalFlip.png</file>
-        <file>icons/vertiicalFlip.png</file>
-        <file>icons/rotate180.png</file>
-        <file>icons/transpose.png</file>
-        <file>icons/penCursor.png</file>
-        <file>icons/cursor.png</file>
-        <file>icons/refresh.png</file>
+        <file>icons/eraserCursor.png</file>
+        <file>icons/colorPickIcon.png</file>
+        <file>icons/fillIcon.png</file>
+        <file>icons/magnifierIcon.png</file>
+        <file>icons/penIcon.png</file>
+        <file>icons/textIcon.png</file>
+        <file>icons/cursorIcon.png</file>
+        <file>icons/horizontalFlipIcon.png</file>
+        <file>icons/refreshIcon.png</file>
+        <file>icons/rotate180Icon.png</file>
+        <file>icons/rotateLeftIcon.png</file>
+        <file>icons/rotateRightIcon.png</file>
+        <file>icons/transposeIcon.png</file>
+        <file>icons/vertiicalFlipIcon.png</file>
     </qresource>
 </RCC>

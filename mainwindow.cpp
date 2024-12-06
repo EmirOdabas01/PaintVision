@@ -545,7 +545,7 @@ void MainWindow::on_penBtn_toggled(bool checked)
 
     if(componentInfo.getIsPenSlc())
     {
-        QPixmap newCursor(":/new/menuIcons/icons/penCursor");
+        QPixmap newCursor(":/new/menuIcons/icons/penIcon");
         QPixmap scaledPixmap = newCursor.scaled(16, 16, Qt::KeepAspectRatio);
         QCursor customCursor(scaledPixmap);
         this->setCursor(customCursor);
@@ -565,9 +565,17 @@ void MainWindow::on_textBtn_toggled(bool checked)
 }
 
 
-void MainWindow::on_brushBtn_toggled(bool checked)
+void MainWindow::on_eraserBtn_toggled(bool checked)
 {
     componentInfo.setIsBrushSlc(checked);
+
+    if(componentInfo.getIsBrushSlc())
+    {
+        QPixmap newCursor(":/new/menuIcons/icons/eraserCursor");
+        QPixmap scaledPixmap = newCursor.scaled(32, 32, Qt::KeepAspectRatio);
+        QCursor customCursor(scaledPixmap);
+        this->setCursor(customCursor);
+    }
 }
 
 

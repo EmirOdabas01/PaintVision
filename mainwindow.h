@@ -104,7 +104,7 @@ private slots:
 
     void on_textBtn_toggled(bool checked);
 
-    void on_brushBtn_toggled(bool checked);
+    void on_eraserBtn_toggled(bool checked);
 
     void on_clrPickBtn_toggled(bool checked);
 
