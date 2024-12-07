@@ -14,6 +14,7 @@ SOURCES += \
     customview.cpp \
     main.cpp \
     mainwindow.cpp \
+    square.cpp \
     uiStylingRepo.cpp\
 
 HEADERS += \
@@ -21,6 +22,7 @@ HEADERS += \
     circle.h \
     customview.h \
     mainwindow.h \
+    square.h \
     uiStylingRepo.h\
 
 FORMS += \

@@ -20,11 +20,12 @@ public:
     QString getSecondaryColorStyle();
     bool getIsSecondarySelected();
 
-    QString generateRadioButtonStyle(const QString& colorStyle);
-
     static colorStyleInfo& getInstance();
 
 private:
+
+    QString generateRadioButtonStyle(const QString& colorStyle);
+
     colorStyleInfo();
 
     QString primaryColor;

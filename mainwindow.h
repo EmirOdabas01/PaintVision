@@ -17,7 +17,7 @@
 #include <QMessageBox>
 #include "customview.h"
 #include "btnselectinfo.h"
-
+#include "square.h"
 #include "circle.h"
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -124,6 +124,10 @@ private slots:
 
     void on_cursor_toggled(bool checked);
 
+    void setCustomCursor(const QPixmap& icon, bool setHotspot = false);
+
+    void eraseToScene();
+
 private:
     Ui::MainWindow *ui;
 
@@ -145,5 +149,6 @@ private:
 
     btnSelectInfo& componentInfo = btnSelectInfo::getInstance();
 
+    Square& eraserRect = Square::getInstance();
 };
 #endif // MAINWINDOW_H

@@ -134,6 +134,9 @@ QRadioButton:checked {
              <height>30</height>
             </size>
            </property>
+           <property name="toolTip">
+            <string>Magnifier</string>
+           </property>
            <property name="text">
             <string/>
            </property>
@@ -162,6 +165,9 @@ QRadioButton:checked {
              <width>30</width>
              <height>30</height>
             </size>
+           </property>
+           <property name="toolTip">
+            <string>Erase</string>
            </property>
            <property name="text">
             <string/>
@@ -204,6 +210,9 @@ QRadioButton:checked {
              <height>30</height>
             </size>
            </property>
+           <property name="toolTip">
+            <string>Pen</string>
+           </property>
            <property name="styleSheet">
             <string notr="true"/>
            </property>
@@ -235,6 +244,9 @@ QRadioButton:checked {
              <width>30</width>
              <height>30</height>
             </size>
+           </property>
+           <property name="toolTip">
+            <string>Pick Color</string>
            </property>
            <property name="text">
             <string/>
@@ -272,6 +284,9 @@ QRadioButton:checked {
              <height>30</height>
             </size>
            </property>
+           <property name="toolTip">
+            <string>Text</string>
+           </property>
            <property name="text">
             <string/>
            </property>
@@ -301,41 +316,15 @@ QRadioButton:checked {
              <height>30</height>
             </size>
            </property>
+           <property name="toolTip">
+            <string>Fill</string>
+           </property>
            <property name="text">
             <string/>
            </property>
            <property name="icon">
             <iconset resource="icons.qrc">
              <normaloff>:/new/menuIcons/icons/fillIcon.png</normaloff>:/new/menuIcons/icons/fillIcon.png</iconset>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>30</width>
-             <height>30</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="3">
-          <widget class="QRadioButton" name="refresh">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-             <horstretch>30</horstretch>
-             <verstretch>30</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>30</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="icon">
-            <iconset resource="icons.qrc">
-             <normaloff>:/new/menuIcons/icons/refreshIcon.png</normaloff>:/new/menuIcons/icons/refreshIcon.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -359,12 +348,56 @@ QRadioButton:checked {
              <height>30</height>
             </size>
            </property>
+           <property name="toolTip">
+            <string>Click</string>
+           </property>
            <property name="text">
             <string/>
            </property>
            <property name="icon">
             <iconset resource="icons.qrc">
              <normaloff>:/new/menuIcons/icons/cursorIcon.png</normaloff>:/new/menuIcons/icons/cursorIcon.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QPushButton" name="pushButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>30</horstretch>
+             <verstretch>30</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="baseSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>Go back to original image</string>
+           </property>
+           <property name="toolTipDuration">
+            <number>-1</number>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="icons.qrc">
+             <normaloff>:/new/menuIcons/icons/refreshIcon.png</normaloff>:/new/menuIcons/icons/refreshIcon.png</iconset>
            </property>
            <property name="iconSize">
             <size>

@@ -36,7 +36,9 @@ MainWindow::~MainWindow()
 void MainWindow::updateCordinate(const QPointF &newCordinate)
 {
     cordinate = newCordinate;
+
     diskForPainting.setCenter(cv::Point(newCordinate.x(), newCordinate.y()));
+    eraserRect.setCorners(cv::Point(newCordinate.x(), newCordinate.y()));
 
     paintFuncNav();
 }
@@ -74,9 +76,6 @@ void MainWindow::show_image()
     Scene->addPixmap(img_to_pix);
 
     ui->graphicsView->setSceneRect(img_to_pix.rect());
-
-
-
 }
 
 void MainWindow::on_actionNew_triggered()
@@ -203,7 +202,6 @@ void MainWindow::on_grey_toggled(bool checked)
 
         ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
-
 }
 
 
@@ -221,8 +219,6 @@ void MainWindow::on_brown_toggled(bool checked)
 
         ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
-
-
 }
 
 
@@ -240,7 +236,6 @@ void MainWindow::on_red_toggled(bool checked)
 
         ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
-
 }
 
 
@@ -258,7 +253,6 @@ void MainWindow::on_orange_toggled(bool checked)
 
         ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
-
 }
 
 
@@ -276,8 +270,6 @@ void MainWindow::on_green_toggled(bool checked)
 
         ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
-
-
 }
 
 
@@ -295,8 +287,6 @@ void MainWindow::on_yellow_toggled(bool checked)
 
         ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
-
-
 }
 
 
@@ -314,8 +304,6 @@ void MainWindow::on_lightBlue_toggled(bool checked)
 
         ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
-
-
 }
 
 
@@ -333,7 +321,6 @@ void MainWindow::on_darkBlue_toggled(bool checked)
 
         ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
-
 }
 
 
@@ -351,8 +338,6 @@ void MainWindow::on_purple_toggled(bool checked)
 
         ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
-
-
 }
 
 
@@ -370,7 +355,6 @@ void MainWindow::on_whiteRbutton_toggled(bool checked)
 
         ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
-
 }
 
 
@@ -388,7 +372,6 @@ void MainWindow::on_lightGrey_toggled(bool checked)
 
         ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
-
 }
 
 
@@ -406,7 +389,6 @@ void MainWindow::on_sandyBrown_toggled(bool checked)
 
         ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
-
 }
 
 
@@ -424,7 +406,6 @@ void MainWindow::on_pink_toggled(bool checked)
 
         ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
-
 }
 
 
@@ -443,8 +424,6 @@ void MainWindow::on_gold_toggled(bool checked)
 
         ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
-
-
 }
 
 
@@ -462,8 +441,6 @@ void MainWindow::on_lightYellow_toggled(bool checked)
 
         ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
-
-
 }
 
 
@@ -481,8 +458,6 @@ void MainWindow::on_lightGreen_toggled(bool checked)
 
         ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
-
-
 }
 
 
@@ -500,8 +475,6 @@ void MainWindow::on_cyan_toggled(bool checked)
 
         ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
-
-
 }
 
 
@@ -519,7 +492,6 @@ void MainWindow::on_darkCyan_toggled(bool checked)
 
         ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
-
 }
 
 
@@ -538,6 +510,20 @@ void MainWindow::on_mediumPurple_toggled(bool checked)
         ui->primaryColor->setStyleSheet(rButtonStyleInfo.getPrimaryColorStyle());
     }
 }
+void MainWindow::setCustomCursor(const QPixmap& icon, bool setHotspot)
+{
+    QPixmap scaledPixmap = icon.scaled(32, 32, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+    QCursor customCursor;
+
+    if (setHotspot)
+        customCursor = QCursor(scaledPixmap, 0, scaledPixmap.height() - 1);
+    else
+        customCursor = QCursor(scaledPixmap);
+
+    this->setCursor(customCursor);
+}
+
+
 
 void MainWindow::on_penBtn_toggled(bool checked)
 {
@@ -546,9 +532,7 @@ void MainWindow::on_penBtn_toggled(bool checked)
     if(componentInfo.getIsPenSlc())
     {
         QPixmap newCursor(":/new/menuIcons/icons/penIcon");
-        QPixmap scaledPixmap = newCursor.scaled(16, 16, Qt::KeepAspectRatio);
-        QCursor customCursor(scaledPixmap);
-        this->setCursor(customCursor);
+        setCustomCursor(newCursor, true);
     }
 }
 
@@ -556,25 +540,35 @@ void MainWindow::on_penBtn_toggled(bool checked)
 void MainWindow::on_fillBtn_toggled(bool checked)
 {
     componentInfo.setIsFillSlc(checked);
+
+    if(componentInfo.getIsFillSlc())
+    {
+        QPixmap newCursor(":/new/menuIcons/icons/fillIcon");
+        setCustomCursor(newCursor, true);
+    }
 }
 
 
 void MainWindow::on_textBtn_toggled(bool checked)
 {
     componentInfo.setIsTextSlc(checked);
+
+    if(componentInfo.getIsTextSlc())
+    {
+        QPixmap newCursor(":/new/menuIcons/icons/textIcon");
+        setCustomCursor(newCursor);
+    }
 }
 
 
 void MainWindow::on_eraserBtn_toggled(bool checked)
 {
-    componentInfo.setIsBrushSlc(checked);
+    componentInfo.setIsEraserSlc(checked);
 
-    if(componentInfo.getIsBrushSlc())
+    if(componentInfo.getIsEraserSlc())
     {
         QPixmap newCursor(":/new/menuIcons/icons/eraserCursor");
-        QPixmap scaledPixmap = newCursor.scaled(32, 32, Qt::KeepAspectRatio);
-        QCursor customCursor(scaledPixmap);
-        this->setCursor(customCursor);
+        setCustomCursor(newCursor);
     }
 }
 
@@ -582,22 +576,37 @@ void MainWindow::on_eraserBtn_toggled(bool checked)
 void MainWindow::on_clrPickBtn_toggled(bool checked)
 {
     componentInfo.setIsClrPickSlc(checked);
+
+    if(componentInfo.getIsClrPickSlc())
+    {
+        QPixmap newCursor(":/new/menuIcons/icons/colorPickIcon");
+        setCustomCursor(newCursor, true);
+    }
 }
 
 
 void MainWindow::on_magnifierBtn_toggled(bool checked)
 {
     componentInfo.setIsMagnifierSlc(checked);
+
+    if(componentInfo.getIsMagnifierSlc())
+    {
+        QPixmap newCursor(":/new/menuIcons/icons/magnifierIcon");
+        setCustomCursor(newCursor);
+    }
 }
 
 void MainWindow::on_paintRadius_valueChanged(int value)
 {
     diskForPainting.setRadius(value);
+    eraserRect.setRadius(value);
 }
 
 void MainWindow::paintFuncNav()
 {
     if(componentInfo.getIsPenSlc()) drawToScene();
+
+    else if(componentInfo.getIsEraserSlc()) eraseToScene();
 }
 
 void MainWindow::drawToScene()
@@ -616,6 +625,17 @@ void MainWindow::drawToScene()
                diskForPainting.getRadius(),
                diskForPainting.getColor(),
                diskForPainting.getFilled());
+
+    show_image();
+}
+
+void MainWindow::eraseToScene()
+{
+    cv::rectangle(Main_image,
+                  eraserRect.getTopLftCorner(),
+                  eraserRect.getBttmRghtCorner(),
+                  cv::Scalar(255, 255, 255),
+                  cv::FILLED);
 
     show_image();
 }

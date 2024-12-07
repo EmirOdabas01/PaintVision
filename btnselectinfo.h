@@ -9,14 +9,14 @@ public:
 
     static btnSelectInfo& getInstance();
 
-    void setIsBrushSlc(bool selected);
+    void setIsEraserSlc(bool selected);
     void setIsPenSlc(bool selected);
     void setIsClrPickSlc(bool selected);
     void setIsMagnifierSlc(bool selected);
     void setIsFillSlc(bool selected);
     void setIsTextSlc(bool selected);
 
-    bool getIsBrushSlc();
+    bool getIsEraserSlc();
     bool getIsPenSlc();
     bool getIsClrPickSlc();
     bool getIsMagnifierSlc();
@@ -26,7 +26,7 @@ private:
     btnSelectInfo();
 
     bool isPenSlc;
-    bool isBrushSlc;
+    bool isEraserSlc;
     bool isClrPickSlc;
     bool isMagnifierSlc;
     bool isFillSlc;

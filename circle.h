@@ -22,7 +22,7 @@ public:
     void setColor(QString newColor);
 private:
 
-     circle();
+    circle();
 
     cv::Point center;
     int radius;

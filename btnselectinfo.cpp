@@ -1,6 +1,6 @@
 #include "btnselectinfo.h"
 
-btnSelectInfo::btnSelectInfo() : isBrushSlc(false), isPenSlc(false), isClrPickSlc(false), isMagnifierSlc(false), isFillSlc(false), isTextSlc(false) {}
+btnSelectInfo::btnSelectInfo() : isEraserSlc(false), isPenSlc(false), isClrPickSlc(false), isMagnifierSlc(false), isFillSlc(false), isTextSlc(false) {}
 
 btnSelectInfo& btnSelectInfo::getInstance()
 {
@@ -8,9 +8,9 @@ btnSelectInfo& btnSelectInfo::getInstance()
     return instance;
 }
 
-void btnSelectInfo::setIsBrushSlc(bool selected)
+void btnSelectInfo::setIsEraserSlc(bool selected)
 {
-    isBrushSlc = selected;
+    isEraserSlc = selected;
 }
 
 void btnSelectInfo::setIsPenSlc(bool selected)
@@ -38,9 +38,9 @@ void btnSelectInfo::setIsTextSlc(bool selected)
     isTextSlc = selected;
 }
 
-bool btnSelectInfo::getIsBrushSlc()
+bool btnSelectInfo::getIsEraserSlc()
 {
-    return isBrushSlc;
+    return isEraserSlc;
 }
 
 bool btnSelectInfo::getIsPenSlc()
